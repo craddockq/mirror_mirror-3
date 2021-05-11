@@ -1,0 +1,82 @@
+{
+  "name": "smart-mirror",
+  "version": "0.0.28",
+  "description": "The fairest of them all",
+  "main": "main.js",
+  "scripts": {
+    "install": "bower install",
+    "start": "electron main.js ",
+    "train-model": "electron scripts/train-model.js",
+    "sonus": "node sonus.js",
+    "motion": "sudo node motion.js",
+    "enable-motion": "npm install johnny-five raspi-io",
+    "update": "git pull && npm install",
+    "wiredep": "wiredep -s index.html",
+    "test": "eslint . --ignore-path .gitignore",
+    "test-fix": "eslint . --ignore-path .gitignore --fix",
+    "postinstall": "bash scripts/copyjsonform"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evancohen/smart-mirror.git"
+  },
+  "keywords": [
+    "Smart Mirror",
+    "IoT",
+    "Voice Control",
+    "DIY"
+  ],
+  "author": "Evan Cohen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evancohen/smart-mirror/issues"
+  },
+  "homepage": "https://github.com/evancohen/smart-mirror",
+  "devDependencies": {
+    "angular-i18n": "^1.5.5",
+    "bower": "^1.7.9",
+    "electron": "6.0.12",
+    "eslint": "^6.4.0",
+    "wiredep-cli": "^0.1.0"
+  },
+  "dependencies": {
+    "@google-cloud/speech": "^3.3.0",
+    "alphavantage": "1.2.6",
+    "angular-moment": "^1.0.1",
+    "annyang": "^2.6.0",
+    "cheerio": "^1.0.0-rc.3",
+    "electron-json-storage": "4.1.8",
+    "express": "^4.14.0",
+    "fitbit-oauth2": "0.0.1",
+    "humanize-duration": "^3.10.1",
+    "hyperion-client": "1.0.3",
+    "jsonform": "git://github.com/jsonform/jsonform.git",
+    "moment": "^2.17.1",
+    "rss-parser": "^3.6.3",
+    "socket.io": "^2.3.0",
+    "sonus": "^1.0.1",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "node": true,
+      "es6": true,
+      "browser": true
+    },
+    "rules": {
+      "indent": [
+        2,
+        "tab"
+      ],
+      "no-console": 0
+    },
+    "globals": {
+      "angular": false,
+      "annyang": false,
+      "moment": false,
+      "config": false,
+      "RRule": false
+    }
+  }
+}

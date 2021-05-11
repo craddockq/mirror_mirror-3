@@ -1,0 +1,137 @@
+{
+  "general": {
+    "language": "en-US",
+    "layout": "main",
+    "commandsPerPage":10
+  },
+  "remote": {
+    "enabled": true,
+    "firstRun": true,
+    "port": 8080
+  },
+  "autoTimer": {
+    "mode": "disabled",
+    "autoSleep": 40,
+    "autoWake": "07:00:00",
+    "wakeCmd": "sudo ./scripts/raspi-monitor.sh on > /dev/null 2>&1",
+    "sleepCmd": "sudo ./scripts/raspi-monitor.sh off > /dev/null 2>&1"
+  },
+  "motion": {
+    "enabled": false,
+    "pin": "GPIO26"
+  },
+  "speech": {
+    "device": "default",
+    "keyFilename": "./keyfile.json",
+    "hotwords": [
+      {
+        "keyword": "smart mirror",
+        "model": "smart_mirror.umdl"
+      }
+    ],
+    "sensitivity": "0.5"
+  },
+  "forecast": {
+    "key": "",
+    "units": "auto",
+    "refreshInterval": 2
+  },
+  "light": {
+    "settings": {
+      "hueIp": "",
+      "hueUsername": ""
+    },
+    "setup": []
+  },
+  "calendar": {
+    "icals": [
+      ""
+    ],
+    "maxResults": 9,
+    "maxDays": 9,
+    "showCalendarNames": true
+  },
+  "giphy": {
+    "key": "dc6zaTOxFJmzC"
+  },
+  "youtube": {
+    "key": ""
+  },
+  "soundcloud": {
+    "key": ""
+  },
+  "spotify": {
+    "creds": {    
+      "clientID":"",
+      "clientSecret":""
+    },
+    "authorization_uri":{
+      "scope": "activity nutrition profile settings sleep social weight heartrate",
+      "state": "3(#0/!~"
+    },        
+    "timeout":3600,
+    "default_device":"raspberry",
+    "position":"top"
+  },
+  "traffic": {
+    "key": "",
+    "refreshInterval": 5,
+    "trips": []
+  },
+  "rss": {
+    "feeds": [],
+    "refreshInterval": 120
+  },
+  "stock": {
+    "names": []
+  },
+  "lastfm": {
+    "key": "",
+    "user": "",
+    "refreshInterval": 0.6
+  },
+  "todoist": {
+    "key": ""
+  },
+  "fitbit": {
+    "timeout": 10000,
+    "uris": {
+      "authorizationUri": "https://www.fitbit.com",
+      "authorizationPath": "/oauth2/authorize",
+      "tokenUri": "https://api.fitbit.com",
+      "tokenPath": "/oauth2/token"
+    },
+    "authorization_uri": {
+      "redirect_uri": "http://localhost:4000/fitbit_auth_callback/",
+      "response_type": "code",
+      "scope": "activity nutrition profile settings sleep social weight heartrate",
+      "state": "3(#0/!~"
+    }
+  },
+  "plugins": [
+    {"name":"greeting","area":"middle-center", "order":"*", "active":true}, 
+    {"name":"remote","area":"middle-center", "order":"*", "active":true},
+    {"name":"soundcloud","area":"middle-center", "order":"*", "active":true},
+    {"name":"map","area":"middle-center", "order":"*", "active":true},
+    {"name":"xkcd","area":"middle-center", "order":"*", "active":true},
+    {"name":"dilbert","area":"middle-center", "order":"*", "active":true},
+    {"name":"commitstrip","area":"middle-center", "order":"*", "active":true},
+    {"name":"search","area":"middle-center", "order":"*", "active":true},
+    {"name":"giphy","area":"middle-center", "order":"*", "active":true},
+    {"name":"reminder","area":"middle-center", "order":"*", "active":true},
+    {"name":"timer","area":"middle-center", "order":"*", "active":true},
+    {"name":"todoist","area":"middle-center", "order":"*", "active":true}, 
+    {"name":"calendar","area":"top-left", "order":"2", "active":true},       
+    {"name":"weather","area":"top-right", "order":"1", "active":true},    
+    {"name":"datetime","area":"top-left", "order":"1", "active":true},  
+    {"name":"stock","area":"top-right", "order":"3", "active":true},    
+    {"name":"traffic","area":"top-right", "order":"2", "active":true},
+    {"name":"tvshows","area":"top-right", "order":"*", "active":true},
+    {"name":"ha-display","area":"top-right", "order":"*", "active":true},      
+    {"name":"commands","area":"bottom-center", "order":"*", "active":true},
+    {"name":"rss","area":"bottom-center", "order":"*", "active":true},   
+    {"name":"fitbit","area":"bottom-left", "order":"*", "active":true},
+    {"name":"scrobbler","area":"bottom-left", "order":"*", "active":true},  
+    {"name":"spotify","area":"bottom-left", "order":"*", "active":true}
+  ]
+}
